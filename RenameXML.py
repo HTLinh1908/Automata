@@ -14,4 +14,4 @@ print(type(b_SHDon))
 a = str(b_SHDon)
 a= a.lstrip('[<SHDon>').rstrip('</SHDon>]')
 
-#os.rename("D:\\f\\CS\\New\\0313330856gd2q3lxlxr.xml", 'D:\\f\\CS\\New\\'+a+".xml")
+os.rename("D:\\f\\CS\\New\\0313330856gd2q3lxlxr.xml", 'D:\\f\\CS\\New\\'+a+".xml")
