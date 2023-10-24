@@ -1,17 +1,24 @@
 import os
 from bs4 import BeautifulSoup
 
-cwd = os.getcwd()
+destination = str(input("Please enter the desired destination: "))
 
-with open('D:\\f\\CS\\New\\0313330856gd2q3lxlxr.xml', 'r', errors='ignore') as f:
-    data = f.read()
+XML_files = os.listdir(destination)
 
-Bs_data = BeautifulSoup(data, "xml")
+for i in XML_files:
+    
+    if i[-3:]=='xml':
 
+        with open(destination + '\\' + str(i), 'r', errors='ignore') as f:
+            data = f.read()
+        
+        Bs_data = BeautifulSoup(data, "xml")
+        
+        
+        b_SHDon = Bs_data.find_all('SHDon')
+        
+        SHDon = str(b_SHDon)
 
-b_SHDon = Bs_data.find_all('SHDon')
-print(type(b_SHDon))
-a = str(b_SHDon)
-a= a.lstrip('[<SHDon>').rstrip('</SHDon>]')
+        SHDon= SHDon.lstrip('[<SHDon>').rstrip('</SHDon>]')
 
-os.rename("D:\\f\\CS\\New\\0313330856gd2q3lxlxr.xml", 'D:\\f\\CS\\New\\'+a+".xml")
+        os.rename(destination + '//' + str(i), destination + '//'+ SHDon + ".xml")
