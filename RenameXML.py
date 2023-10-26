@@ -21,4 +21,4 @@ for i in XML_files:
 
         SHDon= SHDon.lstrip('[<SHDon>').rstrip('</SHDon>]')
 
-        os.rename(destination + '//' + str(i), destination + '//'+ SHDon + ".xml")
+    os.rename(destination + '//' + str(i), destination + '//'+ SHDon + ".xml")
