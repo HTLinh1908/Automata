@@ -1,7 +1,7 @@
 import os
 from bs4 import BeautifulSoup
 
-destination = str(input("Please enter the desired destination: "))
+destination = (str(input("Please enter the desired destination: ")))
 
 XML_files = os.listdir(destination)
 for i in XML_files:
@@ -19,5 +19,7 @@ for i in XML_files:
 
             SHDon= SHDon.lstrip('[<SHDon>').rstrip('</SHDon>]')
 
-        os.rename(destination + '//' + str(i), destination + '//'+ SHDon + ".xml")
+        os.rename(destination + '\\' + str(i), destination + '\\'+ SHDon + ".xml")
+
+
 
