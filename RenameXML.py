@@ -12,13 +12,13 @@ for i in XML_files:
         with open(destination + '\\' + str(i), 'r', errors='ignore') as f:
             data = f.read()
         
-        Bs_data = BeautifulSoup(data, "xml")
+            Bs_data = BeautifulSoup(data, "xml")
         
         
-        b_SHDon = Bs_data.find_all('SHDon')
+            b_SHDon = Bs_data.find_all('SHDon')
         
-        SHDon = str(b_SHDon)
+            SHDon = str(b_SHDon)
 
-        SHDon= SHDon.lstrip('[<SHDon>').rstrip('</SHDon>]')
+            SHDon= SHDon.lstrip('[<SHDon>').rstrip('</SHDon>]')
 
-    os.rename(destination + '//' + str(i), destination + '//'+ SHDon + ".xml")
+        os.rename(destination + '//' + str(i), destination + '//'+ SHDon + ".xml")
