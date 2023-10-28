@@ -1,3 +1,6 @@
+#Copy and paste the folder address of the xml files you want to change the name, then un-capital the 1st letter. It will change the name of the files into the content in SHDon
+
+
 import os
 from bs4 import BeautifulSoup
 
